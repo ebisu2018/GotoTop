@@ -1,0 +1,43 @@
+package main
+
+import (
+	"fmt"
+)
+
+func main2() {
+
+	// 和计算机操作系统一致，默认64位为int64
+	var x int
+	fmt.Println(x)
+
+	var a int = 10
+	fmt.Println(a)
+
+	// 短格式声明并赋值
+	b := a
+
+	// 使用_占位符，表示不使用该变量，用_接受
+	_ = b
+
+	var (
+		c int
+		d float64
+		g bool = true
+	)
+
+	_ = c
+	_ = g
+	d = 1.58786898
+	fmt.Printf("d = %f\n", d)
+	fmt.Printf("d = %.2f\n", d)
+	fmt.Printf("d = %g\n", d)
+	fmt.Printf("d = %e\n", d)
+	fmt.Printf("d = %[1]f, a = %[2]d, d = %[1]e, a = %[2]d\n", d, a)
+
+	// 进制，默认十进制输出
+	e := 0o10
+	f := 0xff
+	fmt.Println(e, f)
+
+	fmt.Println(1_000_000_000)
+}

@@ -3,15 +3,18 @@ package main
 import "fmt"
 
 func main6() {
+
+	// 使用二进制表示
 	a := 200
 	fmt.Printf("%b\n", a)
 
 	// 判断第4位是否为1
+	// 1 向左移3位，其他都是0
 	c := 1 << 3
-
 	r := a & c
 	fmt.Printf("%b & %b = %v\n", a, c, r)
-	binFunc(200)
+
+	binFunc(10)
 }
 
 

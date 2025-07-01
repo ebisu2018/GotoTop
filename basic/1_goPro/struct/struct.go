@@ -5,8 +5,9 @@ import (
 )
 
 // 结构体声明
+// 结构体是一个类型
 type Person struct {
-	Name string
+	Name string // 成员变量，没有逗号
 	Age  int
 }
 
@@ -28,7 +29,7 @@ func main1() {
 
 	fmt.Println(p1)
 
-	// 短格式赋值，可以不使用字段名，不推荐
+	// 可以不使用字段名，不推荐，表述不清
 	p2 := Person{"p2", 30}
 	fmt.Println(p2)
 
@@ -37,6 +38,11 @@ func main1() {
 	fmt.Printf("%T\n", p3)
 
 	// 通过*获取值
+	fmt.Printf("%v\n", *p3)
+
+	// p3和p2地址相同，会连带修改p2
+	p3.Name = "p3"
+	fmt.Println(p2)
 	fmt.Printf("%v\n", *p3)
 
 
@@ -52,7 +58,7 @@ func main1() {
 	p4.hello()
 
 
-	// 匿名结构体，只使用一次可以这么用
+	// 匿名结构体
 	var u struct {
 		Name string
 	}

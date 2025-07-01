@@ -3,6 +3,8 @@ package main
 import "fmt"
 
 func main() {
+
+	// 官方不承认继承，只是其他语言的叫法
 	type user struct {
 		name string
 		age int
@@ -14,9 +16,9 @@ func main() {
 		password string
 	}
 
-	// 匿名成员，默认成员名和结构体名一致
+	
 	type account struct {
-		*user
+		*user // 匿名成员
 		name string // 如果和结构体成员重名，默认指当前自己的变量
 		region string
 	}
@@ -41,7 +43,7 @@ func main() {
 	fmt.Printf("%v\n",a.name)
 	fmt.Printf("%v\n", a.user.name)
 
-	// 不重名可以直接调用
+	// 匿名成员直接调用
 	fmt.Printf("%v\n", a.age)
 
 }

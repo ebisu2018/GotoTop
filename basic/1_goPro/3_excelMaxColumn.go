@@ -6,6 +6,7 @@ func main3() {
 
 	// 已知excel最大列为XFD，获取是多少列
 
+	// 用%d输出是UTF8的编码
 	fmt.Printf("A = %d, Z = %d\n", 'A', 'Z')
 
 	// 获取进制单位，默认excel是26进制

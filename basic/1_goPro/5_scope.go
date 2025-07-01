@@ -2,6 +2,9 @@ package main
 
 import "fmt"
 
+// 外部变量对内部作用域穿透可见
+// 内部作用域对外不可见
+
 // 外部定义的为全局作用域，向内穿透，局部作用域都可见
 var G = "global var"
 

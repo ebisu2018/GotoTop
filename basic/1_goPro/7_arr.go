@@ -2,9 +2,9 @@ package main
 
 import "fmt"
 
-func main7() {
+func main() {
 	// arr1d()
-	arr2d()
+	// arr2d()
 }
 
 func arr1d() {

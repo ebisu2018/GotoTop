@@ -6,7 +6,7 @@ slice 是一个包含array地址，len，cap的结构体
 
 import "fmt"
 
-func main() {
+func main8() {
 	// slice1()
 	expansionCap()
 }
